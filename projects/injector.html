@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kostas Powell | Hybrid Rocket Injector</title>
+
+  <link rel="stylesheet" href="../project-detail.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="name" href="../index.html">Kostas Powell</a>
+
+    <nav>
+      <a href="../index.html">Main</a>
+      <a class="active" href="../projects.html">Projects</a>
+      <a href="../assets/resume.pdf" target="_blank">Resume</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="project-hero">
+      <a class="back-link" href="../projects.html">← Back to projects</a>
+
+      <p class="eyebrow">December 2025</p>
+
+      <h1>Hybrid Rocket Injector</h1>
+
+      <p class="project-subtitle">
+        Propulsion design, CAD, injector sizing, ANSYS Fluent, Python simulation,
+        and manufacturing planning for a hybrid rocket motor.
+      </p>
+
+      
+    </section>
+
+    <section class="hero-image-section">
+      <img src="../assets/QRETInjectorInsertADrawing.jpg" alt="Hybrid rocket injector drawing">
+    </section>
+
+    <section class="project-section two-column">
+      <div>
+        <p class="eyebrow">Overview</p>
+        <h2>What this project was about.</h2>
+      </div>
+
+      <div class="section-copy">
+        <p>
+          This solo project focused on the design and analysis of a hybrid rocket nitrous oxide injector
+          for Queen’s Rocket Engineering Team (QRET). The goal was to develop an injector
+          geometry that could meet mass flow requirements and produce turbulence through a swirling motion to increase
+          the fuel's regression rate, while remaining manufacturable and compatible with the rest 
+          of the rocket motor.
+        </p>
+
+        <p>
+          This project involved CAD design, 2-phase flow calculations, manufacturing consideration,
+          testing, and simulation within ANSYS and Python. The final design features 60x1/16" injection holes 
+          which are drilled at an angle to impart the swirling motion onto the oxidizer, and is made to interface
+          with the injector bulkhead designed by Aslan Lauzon. 
+        </p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <p class="eyebrow">Process</p>
+      <h2>Design process.</h2>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <span>01</span>
+          <h3>Define requirements</h3>
+          <p>Mass flow target, pressure conditions, and geometry constraints were set.</p>
+        </div>
+
+        <div class="process-step">
+          <span>02</span>
+          <h3>Size geometry</h3>
+          <p>Hole count, diameter, flow area, and pressure drop were estimated using first pass calculations.</p>
+        </div>
+
+        <div class="process-step">
+          <span>03</span>
+          <h3>Design for manufacturing</h3>
+          <p>CAD geometry was refined based on drill sizes, plate thickness, tolerances, and assembly needs.</p>
+        </div>
+
+        <div class="process-step">
+          <span>04</span>
+          <h3>Analyze and iterate</h3>
+          <p>Simulation and testing was done to validate and improve the injector design.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="project-section">
+      <p class="eyebrow">Images / CAD / Analysis</p>
+      <h2>Project visuals.</h2>
+
+      <div class="image-grid">
+        <figure>
+          <video src="../assets/coldflow.mp4" controls muted playsinline>
+          Your browser does not support the video tag.
+          </video>
+          <figcaption>Coldflow Testing Of Injector (At 50% Launch Volume)</figcaption>
+        </figure>
+
+        <figure>
+          <img src="../assets/Fluent.png" alt="Injector analysis image">
+          <figcaption>ANSYS Fluent Mesh Setup.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="../assets/dyer.png" alt="Injector manufacturing or test image">
+          <figcaption>Custom Python Script I Developed.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="project-section two-column">
+      <div>
+        <p class="eyebrow">Technical Work</p>
+        <h2>Things I worked on to complete this project.</h2>
+      </div>
+
+      <div class="detail-list">
+
+        <div class="detail-item">
+          <h3>Swirl Calculations</h3>
+          <p>
+            The angles of the injection orifices were carefully tuned to produce a swirl number greater than 0.6 within the rocket's
+            combustion chamber. The effect of this is the formation of a recirculation zone within the fuel grain, which improves
+            mixing and combustion stability. In addition the spray cone half angle was made to collide with the inside of the fuel grain.
+          </p>
+        </div>
+
+        <div class="detail-item">
+          <h3>ANSYS Fluent Simulation</h3>
+          <p>
+            Due to the limited student license I was working with, I could only run single phase ANSYS Fluent simulation 
+            with just under 1 million cells. Due to my limited cell count I had to carefully choose regions of the mesh to refine. 
+            I applied inflation layers along the orifice walls to account for boundary layer drag effects. This simulation was used to 
+            extract a single phase (purely geometric) discharge coefficient. 
+          </p>
+        </div>
+
+        <div class="detail-item">
+          <h3>Custom Python Simulation</h3>
+          <p>
+            This single phase discharge coefficient was then used in a custom built Python simulation to produce an estimated mass flow rate. 
+            The simulation used the dyer two phase fluid flow model, as well as Pythons COOLPROP and Matplotlib libraries. The amount of injector 
+            orifices needed were then determined to obtain the goal mass flow rate of 2.546kg/s of nitrous oxide. 
+          </p>
+        </div>
+
+        <div class="detail-item">
+          <h3>CAD and manufacturability</h3>
+          <p>
+            A finalized CAD model was created within Solidworks and FEA was preformed to ensure the part could withstand the 250PSI pressure gradient. 
+            Engineering drawings with GD&T for the bolt holes were made within Fusion360 and sent to a machinist to be manufactured on a 
+            5-axis CNC mill. 
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="project-section two-column">
+      <div>
+        <p class="eyebrow">Tools</p>
+        <h2>Skills and software.</h2>
+      </div>
+
+      <div class="tags">
+        <span>Propulsion</span>
+        <span>CAD</span>
+        <span>Fluid Flow</span>
+        <span>ANSYS Fluent</span>
+        <span>Python</span>
+        <span>Manufacturing</span>
+        <span>Technical Drawings</span>
+        <span>Data Analysis</span>
+      </div>
+    </section>
+
+    <section class="project-section two-column">
+      <div>
+        <p class="eyebrow">Reflection</p>
+        <h2>What I learned.</h2>
+      </div>
+
+      <div class="section-copy">
+        <p>
+          This project helped me connect theory, simulation, and manufacturing. A major lesson was
+          that injector design is not just a calculation problem, and that the final geometry also depends on
+          available tools, tolerances, testing constraints, and how the part fits into the larger system.
+        </p>
+
+        <p>
+          This project will fly on QRET's Persistance 3 hybrid rocket engine this summer at Launch Canada as part of our 
+          rocket Chimera, hopefully achieving an elevation of over 20,000 feet. 
+        </p>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer class="bottom-contact">
+    <div class="bottom-contact-inner">
+      <p>Made by Kostas Powell with HTML and CSS</p>
+
+      <div class="bottom-links">
+        <a href="mailto:powell.kostas@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/kostas-powell-b218aa330" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kostas Powell | Satellite Battery Management System</title>
+
+  <link rel="stylesheet" href="../project-detail.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="name" href="../index.html">Kostas Powell</a>
+
+    <nav>
+      <a href="../index.html">Main</a>
+      <a class="active" href="../projects.html">Projects</a>
+      <a href="../assets/resume.pdf" target="_blank">Resume</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="project-hero">
+      <a class="back-link" href="../projects.html">← Back to projects</a>
+
+      <p class="eyebrow">April 2025</p>
+
+      <h1>Satellite Battery Management System</h1>
+
+      <p class="project-subtitle">
+        Electronics, microcontrollers, heat transfer simulation, PID control, design reports.
+      </p>
+
+      
+    </section>
+
+    <section class="hero-image-section">
+      <img src="../assets/103diagram.png" alt="Battery Management System Circuit Diagram">
+    </section>
+
+    <section class="project-section two-column">
+      <div>
+        <p class="eyebrow">Overview</p>
+        <h2>What this project was about.</h2>
+      </div>
+
+      <div class="section-copy">
+        <p>
+          This group project was part of my first year design course APSC 103. Our group was tasked by our client,
+          the Queen's Space Engineering Team with creating a system capable of providing power to 6 CubeSats during 
+          a 5 hour flight in a weather balloon. The system had to withstand the ambient tempratures of -55°C in the upper
+          atmosphere for prolonged time. The total system had to be under 150g and fit within a 6x6x10cm enclosure. 
+        </p>
+
+        <p>
+          Our final design used XPS insulation lined with aluminum foil to trap heat inside the sytem. Within this inclosure was
+          a 3.7V 20Wh battery cell attached to charging circuitry and two boost converters. One of these boost converters was 
+          attached to 6 USB outputs. The other one was attached to our active heating and data collection system, with two thermisistors,
+          an Arduino Nano, and a PWM controlled kapton film heater. 
+        </p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <p class="eyebrow">Process</p>
+      <h2>Design process.</h2>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <span>01</span>
+          <h3>Concept Selection</h3>
+          <p>Various concepts were ideated and compared using a weighted evaluation matrix.</p>
+        </div>
+
+        <div class="process-step">
+          <span>02</span>
+          <h3>Modeling and Analysis</h3>
+          <p>A circuit diagram was created with KiCad, as well as physical models within Solidworks.
+            Thermal simulation was also preformed with Solidworks.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <span>03</span>
+          <h3>Build and Test</h3>
+          <p>Everything was soldered and assembled. We calibrated the thermisistors using samples of water with known temperatures. 
+            The final product was also tested within a dry ice enclosure.</p>
+        </div>
+
+        <div class="process-step">
+          <span>04</span>
+          <h3>Documentation and Presentation</h3>
+          <p>Our design process and results were compiled into a final design report. Our final product was also
+            presented to our client. 
+          </p>
+        </div>
+
+
+      </div>
+    </section>
+
+
+
+    <section class="project-section">
+      <p class="eyebrow">Images / CAD / Analysis</p>
+      <h2>Project visuals.</h2>
+
+      <div class="image-grid">
+        <figure>
+          <img src="../assets/BMS.png"  alt="Final product">
+          <figcaption>Final Product.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="../assets/DRYICE.png" alt="Dry Ice Testing.">
+          <figcaption>Dry Ice Testing.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="../assets/BMExcel.png" alt="Dry Ice Testing Temperature Data.">
+          <figcaption>Dry Ice Testing Temperature Data.</figcaption>
+        </figure>
+      </div>
+
+      <div class="image-grid">
+        <figure>
+          <img src="../assets/ThermalSim.png"  alt="Solidworks Thermal Simulation">
+          <figcaption>Solidworks Thermal Simulation.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="../assets/ElecFlow.png" alt="Electronics Logic Flowchart">
+          <figcaption>Electronics Logic Flowchart.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="../assets/Cost.png" alt="Cost Breakdown">
+          <figcaption>Cost Breakdown.</figcaption>
+        </figure>
+      </div>
+
+    </section>
+
+    
+
+
+    <section class="project-section two-column">
+      <div>
+        <p class="eyebrow">Tools</p>
+        <h2>Skills and software.</h2>
+      </div>
+
+      <div class="tags">
+        <span>Electronics</span>
+        <span>KiCad</span>
+        <span>Arduino</span>
+        <span>Thermal Simulation</span>
+        <span>Soldering</span>
+        <span>Testing</span>
+        <span>Technical Reporting</span>
+        <span>Data Analysis</span>
+      </div>
+    </section>
+
+    <section class="project-section two-column">
+      <div>
+        <p class="eyebrow">Reflection</p>
+        <h2>What I learned.</h2>
+      </div>
+
+      <div class="section-copy">
+        <p>
+          This project taught me the importance of testing and iteration during the design process. Our first solution relied on purely insulation, 
+          trapping the residual heat from the electronics inside the enclosure. After early testing we quickly realized this solution wasn't enough,
+          and pivoted towards including the kapton film heaters. If we hadn't prototyped and tested our design so early we wouldn't have had time to 
+          impliment this active heating system. 
+        </p>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer class="bottom-contact">
+    <div class="bottom-contact-inner">
+      <p>Made by Kostas Powell with HTML and CSS</p>
+
+      <div class="bottom-links">
+        <a href="mailto:powell.kostas@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/kostas-powell-b218aa330" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
